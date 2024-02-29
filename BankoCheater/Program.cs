@@ -38,7 +38,6 @@ public struct Plade
     {
         if (this.plade_banko==true) return; // already banko no need to check again
 
-        bool banko = true;
         for (int i = 0; i < this.bankoplade.GetLength(0); i++)
         {
             if (bingo_list[i] == false){
@@ -47,20 +46,23 @@ public struct Plade
                 {
                     if (this.bankoplade_bool[i, j] == false){
                         bingo_list[i] = false;
-                        banko = false;
                     }
                 }
                 
 
                 if (bingo_list[i] == true){ // full line
-                    Console.WriteLine("BINGO! på plade "+this.name+" På linje "+(i+1));
+                    int rækker = (bingo_list[0]?1:0)+(bingo_list[1]?1:0)+(bingo_list[2]?1:0);
+                    if (rækker == 3){                        
+                        Console.WriteLine("Banko! på plade "+this.name);
+                        this.plade_banko = true;
+                    }else{
+                        Console.WriteLine("BINGO! på plade "+this.name+" På linje "+(i+1));
+                        Console.WriteLine("Der er nu " +rækker+" fyldte rækker på "+this.name);
+                    }
                 }
             }
         }
-        if (banko == true){
-            Console.WriteLine("Banko! på plade "+this.name);
-            this.plade_banko = true;
-        }
+
     }
 
 }
@@ -109,20 +111,5 @@ class Program
             Console.WriteLine("Not a number");
         }
         }
-        
-/*
-        Console.WriteLine("bankoplade array:");
-        for (int t = 0;  t < plade_array.Length; t++){
-        for (int i = 0; i < plade_array[t].bankoplade.GetLength(0); i++)
-        {
-            for (int j = 0; j < plade_array[t].bankoplade.GetLength(1); j++)
-            {
-                Console.Write(plade_array[t].bankoplade[i, j] + ":" + plade_array[t].bankoplade_bool[i, j] + " ");
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine();
-
-        }*/
     }
 }
