@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\bankocheater\\BankoCheater.csproj": {}
+    "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\BankoCheater\\BankoCheater.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\bankocheater\\BankoCheater.csproj": {
+    "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\BankoCheater\\BankoCheater.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\bankocheater\\BankoCheater.csproj",
+        "projectUniqueName": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\BankoCheater\\BankoCheater.csproj",
         "projectName": "BankoCheater",
-        "projectPath": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\bankocheater\\BankoCheater.csproj",
+        "projectPath": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\BankoCheater\\BankoCheater.csproj",
         "packagesPath": "C:\\Users\\malt2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\bankocheater\\obj\\",
+        "outputPath": "C:\\Users\\malt2\\github-classroom\\Mercantec-GHC\\banko-snyd-RNU4\\BankoCheater\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\malt2\\AppData\\Roaming\\NuGet\\NuGet.Config",

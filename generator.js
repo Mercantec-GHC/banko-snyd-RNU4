@@ -67,7 +67,22 @@ function generate_rows_check() {
   }
   return rows;
 }
-function update_plates() {
+
+
+var pladeindex = 0;
+var stra = ""
+
+
+function gen_plates(){
+for (var i = 0; i< 10000; i++){
+  update_plates("malthe"+i,1)
+}
+console.log(stra)
+
+}
+function update_plates(name,rara) {
+
+  Math.seedrandom(name)
   for (var x2 = 1; x2 <= 3; x2++) {
     for (var x3 = 1; x3 <= 9; x3++) {
       var celle = "p1" + String(x2) + String(x3);
@@ -92,11 +107,45 @@ function update_plates() {
         var celle = "p" + String(n) + String(j + 1) + String(k);
         dict[celle] = cols[k - 1][j];
       }
+
     }
   }
 
+  /*
+          plade_array[9] = new Plade(new int[,]
+        {
+            {1,20,42,51,62},
+            {25,43,64,74,87},
+            {14,28,39,66,76}
+        },"malthe10");
+
+  */
+  if (rara != 1) return
+  var index = 0
+  var r = 0
+  stra += "plade_array[" + pladeindex + "] = new Plade(new int[,]{"
   for (var key in dict) {
     var value = dict[key];
+
+    if (r!=3){
+    if (index == 0){
+      stra+="{"
+    }
+    if (index !=4)
+    stra+=value+","; else stra+=value;
+
+    if (index == 4){ 
+      index = -1; r++
+      stra+="}"
+      if (r!=3) stra+=","
+    }
+    index++
+  
+    //console.log(value)
     nyfunktion(value, document.getElementById(key));
   }
+  }
+  stra += '},"'+name+'");\n'
+  pladeindex++
 }
+
